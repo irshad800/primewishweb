@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Prime Wish</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- Font Awesome for the icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Make background color full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #2a2a2a;
+        }
+
+        /* FAQ section styling */
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10% 10%;
+            width: 100vw;
+            box-sizing: border-box;
+            background-color: #2a2a2a;
+        }
+
+        /* Gold Heading styling */
+        .faq-section .main-heading {
+            font-size: 30px;
+            color: #ffd700;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .faq-section .content {
+            width: 100%;
+            max-width: 800px;
+            color: white;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .faq h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffd700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq h3 i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: white;
+            display: none;
+            margin-top: 5px;
+        }
+
+        .faq.open p {
+            display: block;
+        }
+
+        .faq.open h3 i {
+            transform: rotate(180deg);
+        }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 10%;
+            }
+
+            .faq h3 {
+                font-size: 18px;
+            }
+
+            .faq p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-section .main-heading {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <!-- Heading -->
+        <h2 class="main-heading">FAQs - Prime Wish Trading LLC</h2>
+
+        <div class="content">
+            <!-- Question 1 -->
+            <div class="faq">
+                <h3>
+                    What products do you offer? <i class="fas fa-chevron-down"></i>
+                </h3>
+                <p>
+                    We offer a wide range of high-quality food products under the brand "Prime Wish," ensuring the best quality at economical prices.
+                </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq">
+                <h3>
+                    Where are your products available? <i class="fas fa-chevron-down"></i>
+                </h3>
+                <p>
+                    Our products are available globally through our extensive export network. For more details, contact our sales team.
+                </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq">
+                <h3>
+                    How do you ensure product quality? <i class="fas fa-chevron-down"></i>
+                </h3>
+                <p>
+                    We maintain rigorous international food safety and quality assurance standards through continuous reviews and improvements of our production facilities.
+                </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq">
+                <h3>
+                    How can I place an order? <i class="fas fa-chevron-down"></i>
+                </h3>
+                <p>
+                    You can place an order by contacting our sales team or visiting our website. We ensure timely shipment and top-notch service.
+                </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq">
+                <h3>
+                    Can I get customized products? <i class="fas fa-chevron-down"></i>
+                </h3>
+                <p>
+                    Yes, we provide customized products tailored to meet the specific requirements and taste profiles of our customers worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ toggle functionality
+        const faqs = document.querySelectorAll('.faq');
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
